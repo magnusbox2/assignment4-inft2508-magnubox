@@ -12,20 +12,20 @@ const HelloWorld = () => {
       {/* Main area */}
       <View style={styles.main}>
         <View style={styles.infoBox}>
-          <Text style={[styles.text, styles.infoTitle]}>Velkommen til Box's Grill</Text>
-          <Text style={[styles.text, styles.infoSubtitle]}>Moderne grillkjøkken i hjertet av byen.</Text>
-          <Text style={[styles.text, styles.infoDetail]}>Adresse: Strandgata 12</Text>
-          <Text style={[styles.text, styles.infoDetail]}>Telefon: 55 55 55 55</Text>
-          <Text style={[styles.text, styles.infoDetail]}>I dag: 11:00-22:00</Text>
+          <Text style={[styles.infoTitle]}>Velkommen til Box's Grill</Text>
+          <Text style={[styles.text]}>Moderne grillkjøkken i hjertet av byen.</Text>
+          <Text style={[styles.text]}>Adresse: Strandgata 12</Text>
+          <Text style={[styles.text]}>Telefon: 55 55 55 55</Text>
+          <Text style={[styles.text]}>I dag: 11:00-22:00</Text>
         </View>
         <View style={styles.button}>
-          <Text style={styles.text}>book bord</Text>
+          <Text style={styles.text}>Book Bord</Text>
         </View>
         <View style={styles.button}>
-          <Text style={styles.text}>See meny</Text>
+          <Text style={styles.text}>See Vår Meny</Text>
         </View>
         <View style={styles.button}>
-          <Text style={styles.text}>See våre åpningstider</Text>
+          <Text style={styles.text}>See Våre Åpningstider</Text>
         </View>
       </View>
     </View>
@@ -61,15 +61,9 @@ const styles = StyleSheet.create({
   },
   infoTitle: {
     fontSize: 22,
+    fontWeight: "bold",
+    color: "white",
     marginBottom: 6,
-  },
-  infoSubtitle: {
-    opacity: 0.9,
-    marginBottom: 12,
-  },
-  infoDetail: {
-    opacity: 0.8,
-    marginBottom: 4,
   },
   button: {
     flex: 1,
