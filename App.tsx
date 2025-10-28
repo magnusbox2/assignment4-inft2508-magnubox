@@ -1,32 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import { Text, View, StyleSheet } from "react-native";
+import  Boks  from "./components/boks";
+import  Button  from "./components/button";
 
-const HelloWorld = () => {
+
+
+const restaurant = () => {
+  const initialState = [
+  {id: 1, displayText: "Book Bord"},
+  {id: 2, displayText: "Se Meny"},
+  {id: 3, displayText: "Se Våre Åpningstider"},
+  ];
+
+  const [buttons, setButtons] = useState(initialState);
+  
   return (
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <Text style={[styles.text, { fontFamily: "Copperplate" }]}>Box's Grill</Text>
       </View>
-
-      {/* Main area */}
       <View style={styles.main}>
-        <View style={styles.infoBox}>
-          <Text style={[styles.infoTitle]}>Velkommen til Box's Grill</Text>
-          <Text style={[styles.text]}>Moderne grillkjøkken i hjertet av byen.</Text>
-          <Text style={[styles.text]}>Adresse: Strandgata 12</Text>
-          <Text style={[styles.text]}>Telefon: 55 55 55 55</Text>
-          <Text style={[styles.text]}>I dag: 11:00-22:00</Text>
-        </View>
-        <View style={styles.button}>
-          <Text style={styles.text}>Book Bord</Text>
-        </View>
-        <View style={styles.button}>
-          <Text style={styles.text}>See Vår Meny</Text>
-        </View>
-        <View style={styles.button}>
-          <Text style={styles.text}>See Våre Åpningstider</Text>
-        </View>
+        <Boks />
+        { 
+          buttons.map((value, index) => { 
+              return <Button key={value.id} displayText={value.displayText} />
+            }
+          )
+        }  
+        {/* <Button displayText= "Book Bord"/>
+        <Button displayText= "Se Meny"/>
+        <Button displayText= "See Våre Åpningstider"/> */}
       </View>
     </View>
   );
@@ -49,32 +53,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 16,
   },
-  infoBox: {
-    flex: 2,
-    borderWidth: 2,
-    borderColor: "white",
-    borderRadius: 10,
-    padding: 16,
-    marginTop: 8,
-    marginBottom: 16,
-    backgroundColor: "#1a1a1a",
-  },
-  infoTitle: {
-    fontSize: 22,
-    fontWeight: "bold",
-    color: "white",
-    marginBottom: 6,
-  },
-  button: {
-    flex: 1,
-    borderRadius: 10,
-    backgroundColor: "orange",
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: 12,
-    borderWidth: 2,
-    borderColor: "white",
-  },
   text: {
     fontSize: 18,
     fontWeight: "bold",
@@ -82,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HelloWorld;
+export default restaurant;
