@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 
 const Boks = () => {
     return (
-        <View style={{flex: 2,
+        <View style={{
             borderWidth: 2,
             borderColor: "white",
             borderRadius: 10,

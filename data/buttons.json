@@ -1,0 +1,39 @@
+{ 
+    "Åpningstider": [
+        {
+            "titel" : "Åpningstider",
+                "data": [
+                {"dag": "Mandag", "tid": "10:00 - 22:00"},
+                {"dag": "Tirsdag", "tid": "10:00 - 22:00"},
+                {"dag": "Onsdag", "tid": "10:00 - 22:00"},
+                {"dag": "Torsdag", "tid": "10:00 - 22:00"},
+                {"dag": "Fredag", "tid": "10:00 - 23:00"},
+                {"dag": "Lørdag", "tid": "12:00 - 23:00"},
+                {"dag": "Søndag", "tid": "12:00 - 21:00"}
+                ]
+    }
+    ], 
+    "See vår meny": [
+        {
+            "Titel" : "Meny",
+            "data": [
+                {"navn": "Pizza Margherita", "pris": 120},
+                {"navn": "Spaghetti Carbonara", "pris": 150},
+                {"navn": "Lasagne", "pris": 160},
+                {"navn": "Tiramisu", "pris": 80}
+            ]
+        }
+        
+    ], 
+    "Book bord": [
+        {
+            "Titel" : "Bord tilgjengelighet",
+            "data": [
+                {"id": 1, "antall_seter": 4},
+                {"id": 2, "antall_seter": 2},
+                {"id": 3, "antall_seter": 6},
+                {"id": 4, "antall_seter": 4}
+            ]
+        }  
+    ] 
+}
