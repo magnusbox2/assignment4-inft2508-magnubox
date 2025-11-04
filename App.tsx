@@ -2,76 +2,29 @@ import React, {useState} from "react";
 import { Text, View, StyleSheet, Alert, ScrollView, SectionList} from "react-native";
 import  Boks  from "./components/boks";
 import  Button  from "./components/button";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import HomeScreen from "./screens/HomeScreen";
+import Meny from "./screens/meny";
+import Åpningstider from "./screens/tider";
+import Bord from "./screens/bord";
 
 
 const restaurant = () => {
-  const initialState = [
-  {id: 1, displayText: "Book Bord"},
-  {id: 2, displayText: "Se Meny"},
-  {id: 3, displayText: "Åpningstider"},
-  ];
 
-  const [buttons, setButtons] = useState(initialState);
-  const [visablePage, setVisablePage] = useState("main");
-  const [items, setItems] = useState ([]);
-  
-
-  const showButtonItems = (category) => {
-    var data = require("./data/buttons.json");
-    if (category == "Åpningstider") {
-       setVisablePage("åningstider");
-       setItems(data.Åpningstider);
-    }
-  }
+  const Stack = createNativeStackNavigator();
   
   return (
-    <View style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={[styles.text, { fontFamily: "Copperplate" }]}>Box's Grill</Text>
-      </View>
-      <View style={styles.main}>
-        {visablePage === "main" &&
-        <ScrollView>
-          <Boks />
-          { 
-            buttons.map((value, index) => { 
-                return <Button key={value.id} displayText={value.displayText} showItems={showButtonItems}/>
-              }
-            )
-          }  
-        </ScrollView>
-        };
-        {visablePage === "åningstider" && 
-          <View style={{
-          paddingTop: 20}}>
-            <SectionList 
-              sections={items}
-              keyExtractor={(item, index) => item + index}
-              renderItem={({item}) => (
-                  <View style={{
-                    backgroundColor: "orange", 
-                    padding: 6, marginVertical: 0, 
-                    flexDirection: "row", 
-                    justifyContent: "space-between"}}>
-                    <Text style={{fontSize: 18}}>{item.dag}</Text>
-                    <Text style={{fontSize: 18}}>{item.tid}</Text>
-                  </View>
-                )}
-              renderSectionHeader={({ section: { titel } }) => (
-                <View>
-                  <Text style={{fontSize: 24, backgroundColor: "orange"}}>{titel}</Text>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Meny" component={Meny} />
+        <Stack.Screen name="Åpingstider" component={Åpningstider} />
+        <Stack.Screen name="Bord" component={Bord} />
 
-                </View>
-              )}
-            />
-        </View>
- 
-        };
-      </View>
-
-    </View>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

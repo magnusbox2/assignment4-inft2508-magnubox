@@ -13,9 +13,9 @@
                 ]
     }
     ], 
-    "See vår meny": [
+    "Meny": [
         {
-            "Titel" : "Meny",
+            "titel" : "Meny",
             "data": [
                 {"navn": "Pizza Margherita", "pris": 120},
                 {"navn": "Spaghetti Carbonara", "pris": 150},
@@ -25,14 +25,14 @@
         }
         
     ], 
-    "Book bord": [
+    "Bord": [
         {
-            "Titel" : "Bord tilgjengelighet",
+            "titel" : "Bord tilgjengelighet",
             "data": [
-                {"id": 1, "antall_seter": 4},
-                {"id": 2, "antall_seter": 2},
-                {"id": 3, "antall_seter": 6},
-                {"id": 4, "antall_seter": 4}
+                {"id": 1, "antall_seter": 4, "Tilgjengelighet": "Ledig"},
+                {"id": 2, "antall_seter": 2, "Tilgjengelighet": "Ledig"},
+                {"id": 3, "antall_seter": 6, "Tilgjengelighet": "Opptatt"},
+                {"id": 4, "antall_seter": 4, "Tilgjengelighet": "Ledig"}
             ]
         }  
     ] 
