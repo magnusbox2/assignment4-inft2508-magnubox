@@ -4,8 +4,20 @@ import { View , Text, SectionList, } from 'react-native';
 
 
 const Bord = ({navigation, route}) => {
-    var data = require("../data/buttons.json");
-    const [items, setItems] = useState (data.Bord);
+
+  const {selectedCategory} = route.params;
+
+  var bordItems = [];
+  const [items, setItems] = useState (bordItems);
+
+  if (selectedCategory == "Bord") {
+    fetch('https://ciara-unrecitative-blair.ngrok-free.dev/Bord')
+    .then((response) => response.json())
+    .then((response) => {
+      setItems(response);
+    })
+  }
+    
 
     return (
         <View style={{

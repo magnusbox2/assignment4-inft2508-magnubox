@@ -2,6 +2,7 @@
     "Åpningstider": [
         {
             "titel" : "Åpningstider",
+            "id": 1,
                 "data": [
                 {"dag": "Mandag", "tid": "10:00 - 22:00"},
                 {"dag": "Tirsdag", "tid": "10:00 - 22:00"},
@@ -15,19 +16,31 @@
     ], 
     "Meny": [
         {
-            "titel" : "Meny",
-            "data": [
-                {"navn": "Pizza Margherita", "pris": 120},
-                {"navn": "Spaghetti Carbonara", "pris": 150},
-                {"navn": "Lasagne", "pris": 160},
-                {"navn": "Tiramisu", "pris": 80}
-            ]
+            "id": 1,
+            "navn": "Pizza Margherita",
+            "pris": 120
+        },
+        {
+            "id": 2,
+            "navn": "Spaghetti Carbonara",
+            "pris": 150
+        },
+        {
+            "id": 3,
+            "navn": "Caesar Salad",
+            "pris": 100
+        },
+        {
+            "id": 4,
+            "navn": "Tiramisu",
+            "pris": 80
         }
         
     ], 
     "Bord": [
         {
             "titel" : "Bord tilgjengelighet",
+            "id": 3,
             "data": [
                 {"id": 1, "antall_seter": 4, "Tilgjengelighet": "Ledig"},
                 {"id": 2, "antall_seter": 2, "Tilgjengelighet": "Ledig"},

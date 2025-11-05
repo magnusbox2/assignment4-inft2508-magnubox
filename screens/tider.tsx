@@ -5,9 +5,18 @@ import { View , Text, SectionList, } from 'react-native';
 
 
 const Åpningstider = ({navigation, route}) => {
-    var data = require("../data/buttons.json");
-    const [items, setItems] = useState (data.Åpningstider);
-
+    const {selectedCategory} = route.params;
+    
+      var tiderItems = [];
+      const [items, setItems] = useState (tiderItems);
+    
+      if (selectedCategory == "Åpningstider") {
+        fetch('https://ciara-unrecitative-blair.ngrok-free.dev/Åpningstider')
+        .then((response) => response.json())
+        .then((response) => {
+          setItems(response);
+        })
+      }
     return (
         <View style={{
           paddingTop: 20}}>

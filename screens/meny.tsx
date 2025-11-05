@@ -1,37 +1,83 @@
-import React, {useState} from 'react';
-import { View , Text, SectionList, } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { 
+    View, 
+    Text,
+    Image,
+    Pressable
+  } from 'react-native';
 
+const Meny = ( {navigation, route} ) => {
 
+    const [items, setItems] = useState ([]);
 
+    const getMeny = async () => {
+        // call api
+        const response = await fetch("https://ciara-unrecitative-blair.ngrok-free.dev/Meny");
+        const menyItems = await response.json();
+        setItems(menyItems);
+    };
 
-const Meny = ({navigation, route}) => {
-    var data = require("../data/buttons.json");
-    const [items, setItems] = useState (data.Meny);
+    const addItem = async () => {
+
+        // call api
+        const response = await fetch("https://ciara-unrecitative-blair.ngrok-free.dev/Meny",
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify ({
+                    id: 6,
+                    name: 'Breadsticks ' ,
+                    price: '50 '
+                })
+            });
+        const foodAdded = await response.json();
+        console.log(foodAdded);
+    };
+
+    useEffect ( () => {getMeny()}, []);
+
+    const FoodItem = ({food}) => {
+        return (
+            <View style={{ 
+                margin: 5,
+                backgroundColor: "#FFDFFD",
+                }}>
+                <Text> Name: {food.navn} </Text>
+                <Text> Price: {food.pris} </Text>
+            </View>
+        );
+    };
+    const MenyHeader = () => {
+        return (
+            <View style={{ 
+                padding: 5,
+                alignItems: "center",
+                justifyContent: "center",
+                }}>
+                <Pressable onPress ={addItem}>
+                    <Image 
+                        style= {{width: 40, height: 40}} 
+                        source={require('../images/plus-sign.png')}
+                    />
+                </Pressable>
+            </View>
+        );
+    };
 
     return (
-        <View style={{
-          paddingTop: 20}}>
-            <SectionList 
-              sections={items}
-              keyExtractor={(item, index) => item + index}
-              renderItem={({item}) => (
-                  <View style={{
-                    backgroundColor: "orange", 
-                    padding: 6, marginVertical: 0, 
-                    flexDirection: "row", 
-                    justifyContent: "space-between"}}>
-                    <Text style={{fontSize: 18}}>{item.navn}</Text>
-                    <Text style={{fontSize: 18}}>{item.pris}</Text>
-                  </View>
-                )}
-              renderSectionHeader={({ section: { titel } }) => (
-                <View>
-                  <Text style={{fontSize: 24, backgroundColor: "orange"}}>{titel}</Text>
-
-                </View>
-              )}
-            />
-        </View>
+    <View> 
+        <MenyHeader/>
+        {
+            items.map((value, index) => {
+                    return <FoodItem key={value.id} food={value}/>
+                }
+            )
+        }
+        
+    </View>
     );
 }
 

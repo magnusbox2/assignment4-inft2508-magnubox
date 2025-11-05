@@ -17,11 +17,11 @@ const HomeScreen = ( {navigation} ) => {
 
   const showButtonItems = (category) => {
     if (category == "Meny") {
-       navigation.navigate("Meny");
+       navigation.navigate("Meny", {selectedCategory : category});
     }else if (category == "Åpningstider") {
-       navigation.navigate("Åpingstider");
+       navigation.navigate("Åpingstider", {selectedCategory : category});
     }else if (category == "Bord") {
-       navigation.navigate("Bord");
+       navigation.navigate("Bord", {selectedCategory : category});
     }
     } 
   
