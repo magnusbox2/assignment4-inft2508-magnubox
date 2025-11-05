@@ -1,52 +1,98 @@
-{ 
-    "Åpningstider": [
+{
+  "Åpningstider": [
+    {
+      "titel": "Åpningstider",
+      "id": "1",
+      "data": [
         {
-            "titel" : "Åpningstider",
-            "id": 1,
-                "data": [
-                {"dag": "Mandag", "tid": "10:00 - 22:00"},
-                {"dag": "Tirsdag", "tid": "10:00 - 22:00"},
-                {"dag": "Onsdag", "tid": "10:00 - 22:00"},
-                {"dag": "Torsdag", "tid": "10:00 - 22:00"},
-                {"dag": "Fredag", "tid": "10:00 - 23:00"},
-                {"dag": "Lørdag", "tid": "12:00 - 23:00"},
-                {"dag": "Søndag", "tid": "12:00 - 21:00"}
-                ]
-    }
-    ], 
-    "Meny": [
-        {
-            "id": 1,
-            "navn": "Pizza Margherita",
-            "pris": 120
+          "dag": "Mandag",
+          "tid": "10:00 - 22:00"
         },
         {
-            "id": 2,
-            "navn": "Spaghetti Carbonara",
-            "pris": 150
+          "dag": "Tirsdag",
+          "tid": "10:00 - 22:00"
         },
         {
-            "id": 3,
-            "navn": "Caesar Salad",
-            "pris": 100
+          "dag": "Onsdag",
+          "tid": "10:00 - 22:00"
         },
         {
-            "id": 4,
-            "navn": "Tiramisu",
-            "pris": 80
+          "dag": "Torsdag",
+          "tid": "10:00 - 22:00"
+        },
+        {
+          "dag": "Fredag",
+          "tid": "10:00 - 23:00"
+        },
+        {
+          "dag": "Lørdag",
+          "tid": "12:00 - 23:00"
+        },
+        {
+          "dag": "Søndag",
+          "tid": "12:00 - 21:00"
         }
-        
-    ], 
-    "Bord": [
+      ]
+    }
+  ],
+  "Meny": [
+    {
+      "id": "1",
+      "navn": "Pizza Margherita",
+      "pris": 120
+    },
+    {
+      "id": "2",
+      "navn": "Spaghetti Carbonara",
+      "pris": 150
+    },
+    {
+      "id": "3",
+      "navn": "Caesar Salad",
+      "pris": 100
+    },
+    {
+      "id": "4",
+      "navn": "Tiramisu",
+      "pris": 80
+    },
+    {
+      "id": 59,
+      "navn": "Breadsticks ",
+      "pris": "50 "
+    },
+    {
+      "id": 68,
+      "navn": "Breadsticks ",
+      "pris": "50 "
+    }
+  ],
+  "Bord": [
+    {
+      "titel": "Bord tilgjengelighet",
+      "id": "3",
+      "data": [
         {
-            "titel" : "Bord tilgjengelighet",
-            "id": 3,
-            "data": [
-                {"id": 1, "antall_seter": 4, "Tilgjengelighet": "Ledig"},
-                {"id": 2, "antall_seter": 2, "Tilgjengelighet": "Ledig"},
-                {"id": 3, "antall_seter": 6, "Tilgjengelighet": "Opptatt"},
-                {"id": 4, "antall_seter": 4, "Tilgjengelighet": "Ledig"}
-            ]
-        }  
-    ] 
+          "id": 1,
+          "antall_seter": 4,
+          "Tilgjengelighet": "Ledig"
+        },
+        {
+          "id": 2,
+          "antall_seter": 2,
+          "Tilgjengelighet": "Ledig"
+        },
+        {
+          "id": 3,
+          "antall_seter": 6,
+          "Tilgjengelighet": "Opptatt"
+        },
+        {
+          "id": 4,
+          "antall_seter": 4,
+          "Tilgjengelighet": "Ledig"
+        }
+      ]
+    }
+  ]
 }

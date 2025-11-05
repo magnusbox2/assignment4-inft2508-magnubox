@@ -18,6 +18,7 @@ const Meny = ( {navigation, route} ) => {
     };
 
     const addItem = async () => {
+        const randomNumber = Math.floor(Math.random() * 100);
 
         // call api
         const response = await fetch("https://ciara-unrecitative-blair.ngrok-free.dev/Meny",
@@ -28,9 +29,9 @@ const Meny = ( {navigation, route} ) => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify ({
-                    id: 6,
-                    name: 'Breadsticks ' ,
-                    price: '50 '
+                    id: randomNumber,
+                    navn: 'Breadsticks ' ,
+                    pris: '50 '
                 })
             });
         const foodAdded = await response.json();
