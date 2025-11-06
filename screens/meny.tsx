@@ -5,6 +5,7 @@ import {
     Image,
     Pressable
   } from 'react-native';
+  import  i18n  from "../translations/i18n.js";
 
 const Meny = ( {navigation, route} ) => {
 
@@ -46,8 +47,8 @@ const Meny = ( {navigation, route} ) => {
                 margin: 5,
                 backgroundColor: "#FFDFFD",
                 }}>
-                <Text> Name: {food.navn} </Text>
-                <Text> Price: {food.pris} </Text>
+                <Text> Navn: {food.navn} </Text>
+                <Text> Pris: {food.pris} </Text>
             </View>
         );
     };

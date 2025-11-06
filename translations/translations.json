@@ -1,0 +1,50 @@
+{
+    "en": {
+    "Åpningstider": "Openinghours",
+    "Meny": "Menu",
+    "Bord": "Table",
+    "Velkommen til Box's Grill": "Welcome to Box's Grill",
+    "Moderne grillkjøkken i hjertet av byen.": "Modern grill kitchen in the heart of the city.",
+    "Adresse: Strandgata 12" : "Address: Strandgata 12", 
+    "Telefon: 55 55 55 55": "Phone: 55 55 55 55",
+    "Mandag": "Monday",
+    "Tirsdag": "Tuesday",
+    "Onsdag": "Wednesday",
+    "Torsdag": "Thursday",
+    "Fredag": "Friday",
+    "Lørdag": "Saturday",
+    "Søndag": "Sunday"
+    },
+    "no":{
+    "Åpningstider": "Åpningstider",
+    "Meny": "Meny",
+    "Bord": "Bord",
+    "Velkommen til Box's Grill": "Velkommen til Box's Grill",
+    "Moderne grillkjøkken i hjertet av byen.": "Moderne grillkjøkken i hjertet av byen.",
+    "Adresse: Strandgata 12" : "Adresse: Strandgata 12", 
+    "Telefon: 55 55 55 55": "Telefon: 55 55 55 55",
+    "Mandag": "Mandag",
+    "Tirsdag": "Tirsdag",
+    "Onsdag": "Onsdag",
+    "Torsdag": "Torsdag",
+    "Fredag": "Friday",
+    "Lørdag": "Saturday",
+    "Søndag": "Søndag"
+    },
+    "es": {
+    "åpningstider": "Horario de apertura",
+    "Meny": "Menú",
+    "Bord": "Mesa",
+    "Velkommen til Box's Grill": "Bienvenido a Box's Grill",
+    "Moderne grillkjøkken i hjertet av byen.": "Parrilla moderna en el corazón de la ciudad.",
+    "Adresse: Strandgata 12" : "Dirección: Strandgata 12", 
+    "Telefon: 55 55 55 55": "Teléfono: 55 55 55 55",
+    "Mandag": "Lunes",
+    "Tirsdag": "Martes",
+    "Onsdag": "Miércoles",
+    "Torsdag": "Jueves",
+    "Fredag": "Viernes",
+    "Lørdag": "Sábado",
+    "Søndag": "Domingo"
+    }
+}
